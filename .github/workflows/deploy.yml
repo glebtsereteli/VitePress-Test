@@ -28,7 +28,7 @@ jobs:
         run: npm ci
         working-directory: ./docs
 
-      # Build the VitePress site
+      # Build the VitePress site inside docs/
       - name: Build site
         run: npm run docs:build
         working-directory: ./docs
@@ -37,7 +37,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: docs/.vitepress/dist
+          path: ./docs/.vitepress/dist
 
   deploy:
     runs-on: ubuntu-latest
