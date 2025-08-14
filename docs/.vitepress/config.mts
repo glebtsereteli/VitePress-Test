@@ -2,6 +2,8 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: '/VitePress-Test/',
+
   title: "VitePress Test",
   description: "VitePress Test",
   themeConfig: {
