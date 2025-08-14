@@ -1,4 +1,4 @@
-name: Deploy VitePress site to Pages
+name: Deploy VitePress site to GitHub Pages
 
 on:
   push:
@@ -13,7 +13,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      # Checkout the repository
+      # Checkout repository
       - name: Checkout repo
         uses: actions/checkout@v4
 
@@ -33,7 +33,7 @@ jobs:
         run: npm run docs:build
         working-directory: ./docs
 
-      # Upload the build output for deployment
+      # Upload build output for deployment
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
